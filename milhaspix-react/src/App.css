@@ -1,0 +1,251 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+}
+
+.header {
+  background: #007bff;
+  padding: 45px;
+}
+
+.logo-left {
+  height: 40px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.steps {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-area {
+  flex: 2;
+  min-width: 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.info-box {
+  flex: 1;
+  min-width: 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* =======================
+   Steps (barra lateral)
+======================= */
+.steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.steps .line {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e0e0e0;
+  z-index: 0;
+}
+
+.step {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.step-text strong {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+.step-text p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.step.ativo {
+  font-weight: bold;
+  color: #007bff;
+}
+.step.completo {
+  color: green;
+}
+
+.circle-outer {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.circle-inner {
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+}
+
+/* =======================
+   Campos do formulário
+======================= */
+.field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs arredondados sem borda */
+.field input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background: #f1f1f1;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.field input:focus {
+  background: #e0e0e0;
+}
+
+/* =======================
+   Botões
+======================= */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button,
+.placeholder button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.actions button:hover,
+.placeholder button:hover {
+  background: #0056b3;
+}
+
+.placeholder {
+  border: 1px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 12px;
+}
+.finalizado {
+  background: #eaffea;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* =======================
+   Companhias aéreas (Passo 1)
+======================= */
+.companhias {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.companhia-card {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.companhia-card img {
+  max-width: 100%;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.companhia-card p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.companhia-card:hover {
+  transform: scale(1.05);
+  border-color: #ccc;
+}
+
+.companhia-card.selecionada {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  transform: scale(1.08);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .companhias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+  }
+  .companhia-card {
+    width: 100px;
+    padding: 12px;
+  }
+  .companhia-card img {
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .companhias {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .companhia-card {
+    width: 90px;
+    padding: 10px;
+  }
+  .companhia-card img {
+    height: 35px;
+  }
+  .companhia-card p {
+    font-size: 12px;
+  }
+}
