@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
+
 function App() {
   // Estados do formulário
   const [cpf, setCpf] = useState("");
