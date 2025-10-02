@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 
-
 function App() {
   // Estados do formulário
   const [cpf, setCpf] = useState("");
@@ -14,7 +13,7 @@ function App() {
 
   // Controle do passo ativo
   const [passoAtivo, setPassoAtivo] = useState(0);
-  const [companhiaSelecionada, setCompanhiaSelecionada] = useState(""); // << novo estado
+  const [companhiaSelecionada, setCompanhiaSelecionada] = useState("");
 
   const passos = [
     { id: 0, titulo: "Passo 1", texto: "Escolha a companhia aérea" },
@@ -51,10 +50,10 @@ function App() {
 
             <div className="companhias">
               {[
-                { id: "azul", nome: "TudoAzul", img: "/src/assets/azul.png" },
-                { id: "smiles", nome: "Smiles", img: "/src/assets/smiles.png" },
-                { id: "latam", nome: "Latam Pass", img: "/src/assets/latam.png" },
-                { id: "air", nome: "Airlines", img: "/src/assets/air.png" },
+                { id: "azul", nome: "TudoAzul", img: "/assets/azul.png" },
+                { id: "smiles", nome: "Smiles", img: "/assets/smiles.png" },
+                { id: "latam", nome: "Latam Pass", img: "/assets/latam.png" },
+                { id: "air", nome: "Airlines", img: "/assets/air.png" },
               ].map((cia) => (
                 <div
                   key={cia.id}
@@ -110,7 +109,7 @@ function App() {
               </div>
 
               <p className="total">
-                **Valor total estimado:** R${" "}
+                <strong>Valor total estimado:</strong> R${" "}
                 {(
                   (parseFloat(quantidadeMilhas || 0) / 1000) *
                   parseFloat(valorMilha || 0)
@@ -191,9 +190,9 @@ function App() {
               <div className="actions">
                 <button type="button" onClick={voltarPasso}>
                   ← Voltar
-                </button><br />
+                </button>
                 <button type="submit">Concluir →</button>
-              </div><br />
+              </div>
             </form>
           </>
         );
@@ -215,7 +214,7 @@ function App() {
   return (
     <div>
       <header className="header">
-        <img src="/src/assets/logo.png.png" alt="logo-milhas" className="logo-left" />
+        <img src="/assets/logo.png" alt="logo-milhas" className="logo-left" />
       </header>
 
       <div className="container">
