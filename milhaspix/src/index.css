@@ -1,0 +1,19 @@
+/* Reset global */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Garantir que o app ocupe toda a altura */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

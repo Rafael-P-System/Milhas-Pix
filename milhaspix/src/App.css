@@ -1,0 +1,223 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background: #007bff;
+  color: #fff;
+  padding: 20px; /* reduzido */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-left {
+  height: 35px;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  flex-wrap: nowrap;       /* mantém lado a lado */
+  align-items: stretch;    /* estica verticalmente */
+  padding: 20px;
+  gap: 20px;
+  min-height: 70vh;        /* altura mínima para esticar */
+}
+
+/* Stepper (esquerda) */
+.steps {
+  flex: 0 0 220px;         /* largura fixa */
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Área central */
+.form-area {
+  flex: 1;                 /* ocupa espaço restante */
+  min-width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Resumo (direita) */
+.info-box {
+  flex: 0 0 220px;         /* largura fixa */
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Steps */
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+.step-text strong {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 2px;
+}
+.step-text p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.step.ativo {
+  font-weight: bold;
+  color: #007bff;
+}
+.step.completo {
+  color: green;
+}
+
+.circle-outer {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.circle-inner {
+  width: 8px;
+  height: 8px;
+  background: #007bff;
+  border-radius: 50%;
+}
+
+/* Campos */
+.field {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background: #f1f1f1;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+.field input:focus {
+  background: #e0e0e0;
+}
+
+/* Botões menores */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.actions button {
+  padding: 8px 14px;       /* menor */
+  border: none;
+  border-radius: 20px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;         /* fonte menor */
+  transition: background 0.3s;
+}
+
+.actions button:hover {
+  background: #0056b3;
+}
+
+.actions button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Companhias */
+.companhias {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.companhia-card {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.companhia-card img {
+  max-width: 100%;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+.companhia-card p {
+  font-size: 12px;
+  margin: 0;
+  color: #333;
+}
+
+.companhia-card:hover {
+  transform: scale(1.05);
+  border-color: #ccc;
+}
+
+.companhia-card.selecionada {
+  border-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transform: scale(1.08);
+}
+
+/* Finalizado */
+.finalizado {
+  background: #eaffea;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.finalizado h3 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
