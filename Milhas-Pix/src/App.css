@@ -97,7 +97,7 @@ body {
   color: #007bff;
 }
 .step.completo {
-  color: green;
+  color: rgb(16, 18, 16);
 }
 
 .circle-outer {

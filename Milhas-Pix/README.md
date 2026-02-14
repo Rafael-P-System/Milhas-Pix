@@ -14,8 +14,8 @@ O sistema guia o usuário em um fluxo de 4 passos: escolha da companhia aérea, 
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/seuusuario/milhaspix.git
-cd milhaspix
+git clone https://github.com/seuusuario/milhas-pix.git
+cd milhas-pix
 npm install
 ▶️ Uso
 Inicie o servidor de desenvolvimento:
